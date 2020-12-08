@@ -1,6 +1,14 @@
 from ophyd import Device, Component as Cpt, EpicsMotor
 
 
+# Temporary test motor
+class TestMotor(Device):
+    e   = Cpt(EpicsMotor, '-Ax:E}Mtr')
+    f   = Cpt(EpicsMotor, '-Ax:F}Mtr')
+    ctr = Cpt(EpicsMotor, '-Ax:XCtr}Mtr')
+    gap = Cpt(EpicsMotor, '-Ax:XGap}Mtr')
+
+
 class XYMotor(Device):
     x = Cpt(EpicsMotor, '-Ax:X}Mtr')
     y = Cpt(EpicsMotor, '-Ax:Y}Mtr')
@@ -45,6 +53,9 @@ class Mirror(Device):
 #######################################################
 # NYX
 #######################################################
+
+# Test Motor (temporary)
+tstmtr = TestMotor('XF:19IDC-OP{Test', name='tstmtr')
 
 # Beam Mask
 beam_mask = XYMotor('XF:19IDC-OP{BM:1', name='beam_mask')

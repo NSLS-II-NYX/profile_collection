@@ -3,6 +3,7 @@ from pathlib import Path
 import appdirs
 import nslsii
 from bluesky.utils import PersistentDict
+from IPython import get_ipython
 
 # Base configuration
 #  pbar=False disables progress bar (undesirable in Jupyter)

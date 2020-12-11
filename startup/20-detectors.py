@@ -3,12 +3,15 @@ from ophyd import (
     SingleTrigger,
     StatsPlugin,
     ROIPlugin,
-    TIFFPlugin,
+    TransformPlugin,
     EpicsSignalRO,
 )
 
 
 class StandardCam(SingleTrigger, AreaDetector):
+    # Transform
+    trans1 = Cpt(TransformPlugin, 'Trans1:')
+    
     # Statistics
     stats1 = Cpt(StatsPlugin, "Stats1:")
     stats2 = Cpt(StatsPlugin, "Stats2:")

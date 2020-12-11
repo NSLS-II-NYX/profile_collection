@@ -22,9 +22,6 @@ class StandardCam(SingleTrigger, AreaDetector):
     roi3 = Cpt(ROIPlugin, "ROI3:")
     roi4 = Cpt(ROIPlugin, "ROI4:")
 
-    # TIFF saving
-    tiff = Cpt(TIFFPlugin, "TIFF1:")
-
 
 # CVD screen in the white beam, us of the DCM
 cam_wb = StandardCam("XF:19ID-BI{Cam:1}", name="cam_wb")
@@ -67,7 +64,6 @@ for cam in all_cams:
             "sigma_xy",
             "centroid",
         ]
-    cam.tiff.read_attrs = []  # leaving just the 'image'
 
 # Ion Chambers
 ion1 = EpicsSignalRO("XF:19IDD-CT{Ion:1-Gauge:1}Volts-I", name="ion1")

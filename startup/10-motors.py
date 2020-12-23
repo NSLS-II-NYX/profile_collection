@@ -1,20 +1,20 @@
-from ophyd import MotorBundle, Component as Cpt, EpicsMotor
+from ophyd import Device, Component as Cpt, EpicsMotor
 
 
 # Temporary test motor
-class TestMotor(MotorBundle):
+class TestMotor(Device):
     e = Cpt(EpicsMotor, "-Ax:E}Mtr")
     f = Cpt(EpicsMotor, "-Ax:F}Mtr")
     ctr = Cpt(EpicsMotor, "-Ax:XCtr}Mtr")
     gap = Cpt(EpicsMotor, "-Ax:XGap}Mtr")
 
 
-class XYMotor(MotorBundle):
+class XYMotor(Device):
     x = Cpt(EpicsMotor, "-Ax:X}Mtr")
     y = Cpt(EpicsMotor, "-Ax:Y}Mtr")
 
 
-class Slits(MotorBundle):
+class Slits(Device):
     b = Cpt(EpicsMotor, "-Ax:B}Mtr")
     i = Cpt(EpicsMotor, "-Ax:I}Mtr")
     o = Cpt(EpicsMotor, "-Ax:O}Mtr")
@@ -25,7 +25,7 @@ class Slits(MotorBundle):
     y_gap = Cpt(EpicsMotor, "-Ax:YGap}Mtr")
 
 
-class DCM(MotorBundle):
+class DCM(Device):
     # Virtual Motor
     energy = Cpt(EpicsMotor, "-Ax:E}Mtr")
 
@@ -41,7 +41,7 @@ class DCM(MotorBundle):
     c1_bnd = Cpt(EpicsMotor, "-Ax:Bnd}Mtr")
 
 
-class Mirror(MotorBundle):
+class Mirror(Device):
     y = Cpt(EpicsMotor, "-Ax:Y}Mtr")
     x = Cpt(EpicsMotor, "-Ax:X}Mtr")
     p = Cpt(EpicsMotor, "-Ax:P}Mtr")

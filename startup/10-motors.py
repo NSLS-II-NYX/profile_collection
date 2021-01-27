@@ -28,6 +28,7 @@ class Slits(Device):
 class DCM(Device):
     # Virtual Motor
     energy = Cpt(EpicsMotor, "-Ax:E}Mtr")
+    c2_bnd = Cpt(EpicsMotor, "-Ax:C2Bnd}Mtr")
 
     # Real Motors
     bragg = Cpt(EpicsMotor, "-Ax:B}Mtr")

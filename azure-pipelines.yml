@@ -15,8 +15,8 @@ jobs:
   - template: azure-linux.yml@templates-2021-1.0  # Template reference
     parameters:
       beamline_acronym: NYX
-    name: collection-2021-1.0
+    displayName: collection-2021-1.0
   - template: azure-linux.yml@templates-2019-3.0.1  # Template reference
     parameters:
       beamline_acronym: NYX
-    name: templates-2019-3.0.1
+    displayName: templates-2019-3.0.1

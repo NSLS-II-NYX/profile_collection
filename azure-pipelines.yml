@@ -1,17 +1,20 @@
 resources:
   repositories:
-    - repository: templates
+    - repository: templates-2021-1.0
       type: github
       name: NSLS-II/profile-collection-ci
       ref: refs/heads/collection-2021-1.0
       endpoint: github
-    - repository: templates
+    - repository: templates-2019-3.0.1
       type: github
       name: NSLS-II/profile-collection-ci
       ref: refs/heads/collection-2019-3.0.1
       endpoint: github
 
 jobs:
-- template: azure-linux.yml@templates  # Template reference
-  parameters:
-    beamline_acronym: NYX
+  - template: azure-linux.yml@templates-2021-1.0  # Template reference
+    parameters:
+      beamline_acronym: NYX
+  - template: azure-linux.yml@templates-2019-3.0.1  # Template reference
+    parameters:
+      beamline_acronym: NYX

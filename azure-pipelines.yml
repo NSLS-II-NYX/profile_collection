@@ -12,11 +12,9 @@ resources:
       endpoint: github
 
 jobs:
-  - template: azure-linux.yml@templates-2021-1.0  # Template reference
+  - template: azure-linux.yml@templates-2021-1.0
     parameters:
       beamline_acronym: NYX
-    displayName: collection-2021-1.0
-  - template: azure-linux.yml@templates-2019-3.0.1  # Template reference
+  - template: azure-linux.yml@templates-2019-3.0.1
     parameters:
       beamline_acronym: NYX
-    displayName: templates-2019-3.0.1

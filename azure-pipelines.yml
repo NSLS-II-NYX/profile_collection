@@ -1,7 +1,7 @@
 parameters:
   - name: beamline_acronym
     type: string
-    value: NYX
+    default: NYX
 
 resources:
   repositories:

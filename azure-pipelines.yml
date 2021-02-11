@@ -1,5 +1,5 @@
-variables:
-  BEAMLINE_ACRONYM: NYX
+parameters:
+  beamline_acronym: NYX
 
 resources:
   repositories:

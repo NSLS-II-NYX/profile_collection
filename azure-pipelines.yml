@@ -6,6 +6,9 @@ resources:
       ref: refs/heads/single-run-test-step
       endpoint: github
 
+variables:
+  BEAMLINE_ACRONYM: NYX
+
 jobs:
   - template: collection-2019-3.0.1.yml@templates
     parameters:

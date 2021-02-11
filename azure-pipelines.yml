@@ -1,3 +1,6 @@
+variables:
+  BEAMLINE_ACRONYM: NYX
+
 resources:
   repositories:
     - repository: templates
@@ -8,8 +11,4 @@ resources:
 
 jobs:
   - template: collection-2019-3.0.1.yml@templates
-    parameters:
-      beamline_acronym: NYX
   - template: collection-2021-1.0.yml@templates
-    parameters:
-      beamline_acronym: NYX

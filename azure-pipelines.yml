@@ -3,7 +3,7 @@ resources:
     - repository: templates
       type: github
       name: NSLS-II/profile-collection-ci
-      ref: refs/heads/main
+      ref: refs/heads/single-run-test-step
       endpoint: github
 
 jobs:

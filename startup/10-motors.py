@@ -53,6 +53,57 @@ class Mirror(Device):
     bnd2 = Cpt(EpicsMotor, "-Ax:Bnd2}Mtr")
 
 
+# Endstation devices
+class SampleCam(Device):
+    x = Cpt(EpicsMotor, "-Ax:X}Mtr")
+    z = Cpt(EpicsMotor, "-Ax:Z}Mtr")
+    focus = Cpt(EpicsMotor, "-Ax:F}Mtr")
+
+
+class BeamPipe(Device):
+    pitch = Cpt(EpicsMotor, "-Ax:P")
+
+
+class Global(Device):
+    x = Cpt(EpicsMotor, "-Ax:X}Mtr")
+    yaw = Cpt(EpicsMotor, "-Ax:Yaw}Mtr")
+
+
+class Goniometer(Device):
+    omega = Cpt(EpicsMotor, "-Ax:O}Mtr")
+    vert = Cpt(EpicsMotor, "-Ax:V}Mtr")
+    x = Cpt(EpicsMotor, "-Ax:X}Mtr")
+    y = Cpt(EpicsMotor, "-Ax:Y}Mtr")
+    z = Cpt(EpicsMotor, "-Ax:Z}Mtr")
+    kappa = Cpt(EpicsMotor, "-Ax:K}Mtr")
+
+
+class Optic(Device):
+    vert = Cpt(EpicsMotor, "-Ax:V}Mtr")
+
+
+class BeamStop(Device):
+    vert = Cpt(EpicsMotor, "-Ax:V}Mtr")
+    horiz = Cpt(EpicsMotor, "-Ax:H}Mtr")
+    z = Cpt(EpicsMotor, "-Ax:Z}Mtr")
+
+
+class Table(Device):
+    vctr = Cpt(EpicsMotor, "-Ax:VCtr}Mtr")
+    vo = Cpt(EpicsMotor, "-Ax:VO}Mtr")
+    vi = Cpt(EpicsMotor, "-Ax:VI}Mtr")
+    hu = Cpt(EpicsMotor, "-Ax:HU}Mtr")
+    hd = Cpt(EpicsMotor, "-Ax:HD}Mtr")
+
+
+class Detector(Device):
+    z = Cpt(EpicsMotor, "-Ax:Z}Mtr")
+
+
+class Robot(Device):
+    lid = Cpt(EpicsMotor, "-Ax:Lid}Mtr")
+
+
 #######################################################
 # NYX
 #######################################################
@@ -77,3 +128,37 @@ dcm = DCM("XF:19IDC-OP{Mono:DCM", name="dcm")
 
 # Mirror
 mirror = Mirror("XF:19IDC-OP{Mir:1", name="mirror")
+
+# High Magnification Camera
+cam_himag = SampleCam("XF:19IDC-ES{Cam:HiMag", name="cam_himag")
+
+# Low Magnification Camera
+cam_lomag = SampleCam("XF:19IDC-ES{Cam:LoMag", name="cam_lomag")
+
+# Beam Pipe
+bp = BeamPipe("XF:19IDC-ES{BP:1", name="bp")
+
+# Global Axes
+gbl = Global("XF:19IDC-ES{Gbl:1", name="gbl")
+
+# Goniometer
+gonio = Goniometer("XF:19IDC-ES{Gon:1", name="gonio")
+
+# Optic
+optic = Optic("XF:19IDC-ES{Opt:1", name="optic")
+
+# Beam Stop
+bs = BeamStop("XF:19IDC-ES{BS:1", name="bs")
+
+# Beam Definition Slits
+bd_slits = Slits("XF:19IDC-ES{Slt:BD", name="bd_slits")
+
+# Detector
+det = Detector("XF:19IDC-ES{Det:1", name="det")
+
+# Table
+table = Detector("XF:19IDC-ES{Tbl:1", name="table")
+
+# Robot
+rbt = Robot("XF:19IDC-ES{Rbt:1", name="rbt")
+

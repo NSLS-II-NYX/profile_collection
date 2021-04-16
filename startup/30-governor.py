@@ -210,7 +210,17 @@ def _make_governors(prefix: str, name: str) -> "Governors":
     cl = get_cl()
 
     gov_names: List[str] = cl.caget(f"{prefix}{{Gov}}Sts:Configs-I")
-    gov_prefixes: List[str] = [f"{prefix}{{Gov:{name}" for name in gov_names]
+    # If there is only one Governor, cl.caget will return str
+    # instead of a list with a single str
+    if isinstance(gov_names, str):
+        gov_names = [gov_names]
+    
+    try:
+        gov_prefixes: List[str] = [f"{prefix}{{Gov:{name}" for name in gov_names]
+    except:
+        # Iteration failed, likely there is no Governor available
+        gov_names = []
+        gov_prefixes = []
 
     class Governors(Device):
         sel = Cpt(GovernorDriver, f"{prefix}{{Gov}}")

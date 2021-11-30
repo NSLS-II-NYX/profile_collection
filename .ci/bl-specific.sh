@@ -6,3 +6,4 @@
 export AZURE_TESTING=1
 
 pip install -vv git+https://github.com/NSLS-II-NYX/nyxtools@main
+pip install -vv git+https://github.com/NSLS-II-AMX/mxtools@main

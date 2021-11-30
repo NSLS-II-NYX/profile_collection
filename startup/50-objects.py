@@ -2,7 +2,7 @@ from nyxtools.robot import DensoOphydRobot
 from nyxtools.governor import _make_governors
 from mxtools.zebra import Zebra
 from nyxtools.vector import VectorProgram
-from nyxtools.pilatus_detector import PilatusBase
+from nyxtools.pilatus import PilatusBase
 from nyxtools.flyer import NYXFlyer
 
 robot = DensoOphydRobot("XF:19IDC-ES{Rbt:1}", name="robot")

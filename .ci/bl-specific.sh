@@ -5,5 +5,5 @@
 
 export AZURE_TESTING=1
 
-pip install -vv git+https://github.com/NSLS-II-NYX/nyxtools@pilatus_detector
+pip install -vv git+https://github.com/mskinner5278/nyxtools@pilatus_detector
 pip install -vv git+https://github.com/NSLS-II-AMX/mxtools@main

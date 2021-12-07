@@ -24,10 +24,26 @@ scan_params = {
     'y_start_um': 0,
     'z_start_um': 0,
     'file_prefix': 'testjun',
-    'data_directory_name': '/nyx-data/test/bluesky-2021-12-01',
+    # 'data_directory_name': '/nyx-data/test/bluesky-2021-12-01',
+    'data_directory_name': '/nyx-data/test/juntest',
     'file_number_start': 1,
     'x_beam': 1000,
     'y_beam': 1200,
     'wavelength': 0.9876,
     'det_distance_m': 0.25,
     }
+
+# In [2]: hdr.start
+# Out[2]:
+# {'uid': '5d7b5855-382c-4043-aa67-a7e026392543',
+#  'time': 1638912272.5825405,
+#  'beamline_attenuators': {},
+#  'optinal_comments': '',
+#  'scan_id': 21,
+#  'facility': 'NSLS-II',
+#  'beamline_beamsize': 'low_divergence',
+#  'beamline_name': 'NYX',
+#  'beamline_sample_environement': 'in-vacuum',
+#  'beamline_id': 'SST-1 RSoXS',
+#  'plan_type': 'generator',
+#  'plan_name': 'fly'}

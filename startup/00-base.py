@@ -64,3 +64,15 @@ except ImportError:
 
 RE.md["beamline_name"] = "NYX"
 RE.md["facility"] = "NSLS-II"
+
+# TODO: comment out when in production.
+from bluesky.utils import ts_msg_hook
+RE.msg_hook = ts_msg_hook
+print(f"\n\t{__file__}: Using 'ts_msg_hook'...\n")
+
+
+# Temp workaround to register the handler (does not work via entrypoints in
+# setup.py for some reason...)
+
+from nyxtools.handlers import PilatusHandlerMX
+db.reg.register_handler("AD_PILATUS_MX", PilatusHandlerMX)

@@ -5,5 +5,5 @@
 
 export AZURE_TESTING=1
 
-conda install mxtools
-conda install nyxtools
+conda install mxtools -c conda-forge
+conda install nyxtools -c conda-forge

@@ -5,5 +5,5 @@
 
 export AZURE_TESTING=1
 
-pip install -vv git+https://github.com/NSLS-II-AMX/mxtools@main
-pip install -vv git+https://github.com/NSLS-II-NYX/nyxtools@flyer-test
+conda install mxtools
+conda install nyxtools

@@ -50,7 +50,7 @@ from IPython import get_ipython
 # Base configuration
 #  pbar=False disables progress bar (undesirable in Jupyter)
 #  bec=False disables Best Effort Callback (seems to be causing issues)
-nslsii.configure_base(get_ipython().user_ns, "nyx", pbar=False, bec=True)
+nslsii.configure_base(get_ipython().user_ns, "nyx", pbar=False, bec=True, publish_documents_with_kafka=True)
 
 try:
     from bluesky.utils import PersistentDict

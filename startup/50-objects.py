@@ -1,5 +1,5 @@
 from nyxtools.robot import DensoOphydRobot
-from nyxtools.governor import _make_governors
+from mxtools.governor import _make_governors
 from mxtools.zebra import Zebra
 from nyxtools.vector import VectorProgram
 from nyxtools.pilatus import PilatusBase
